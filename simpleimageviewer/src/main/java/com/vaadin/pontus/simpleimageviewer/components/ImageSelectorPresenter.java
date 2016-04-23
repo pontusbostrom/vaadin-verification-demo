@@ -8,6 +8,8 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import com.vaadin.pontus.simpleimageviewer.model.ImageDTO;
 import com.vaadin.server.StreamResource;
 import com.vaadin.server.StreamResource.StreamSource;
@@ -16,6 +18,7 @@ public class ImageSelectorPresenter {
 
     private final ImageSelector view;
     private final List<ImageDTO> images;
+    @Nullable
     private ImageDTO chosen;
 
     public ImageSelectorPresenter(ImageSelector view) {

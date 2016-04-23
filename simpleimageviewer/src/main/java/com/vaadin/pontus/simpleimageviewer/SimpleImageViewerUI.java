@@ -1,5 +1,6 @@
 package com.vaadin.pontus.simpleimageviewer;
 
+import javax.annotation.Nullable;
 import javax.servlet.annotation.WebServlet;
 
 import com.vaadin.annotations.Theme;
@@ -15,6 +16,7 @@ import com.vaadin.ui.UI;
 @Widgetset("com.vaadin.pontus.simpleimageviewer.MyAppWidgetset")
 public class SimpleImageViewerUI extends UI {
 
+    @Nullable
     private MainViewImpl view;
 
     @Override

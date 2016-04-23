@@ -5,12 +5,15 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import javax.annotation.Nullable;
+
 import com.google.common.io.ByteStreams;
 import com.vaadin.pontus.simpleimageviewer.model.ImageDTO;
 
 public class ImageUploaderPresenter {
 
     private final ImageUploader viewer;
+    @Nullable
     private ImageDTO image;
 
     public ImageUploaderPresenter(ImageUploader viewer) {
@@ -49,7 +52,8 @@ public class ImageUploaderPresenter {
 
     }
 
-    private static File createFile(String fileEnding) throws IOException {
+    private static File createFile(@Nullable String fileEnding)
+            throws IOException {
         // This methods can be called with fileEnding==null and Infer finds
         // this problem.
         if (fileEnding.equals("png") || fileEnding.equals("jpg")

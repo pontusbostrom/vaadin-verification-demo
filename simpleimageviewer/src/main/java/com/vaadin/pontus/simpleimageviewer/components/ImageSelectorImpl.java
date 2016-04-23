@@ -2,6 +2,8 @@ package com.vaadin.pontus.simpleimageviewer.components;
 
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import com.vaadin.data.util.BeanItemContainer;
 import com.vaadin.pontus.simpleimageviewer.model.ImageDTO;
 import com.vaadin.pontus.simpleimageviewer.views.ImageView;
@@ -62,7 +64,7 @@ public class ImageSelectorImpl extends HorizontalLayout implements
         selector.setItemCaptionPropertyId("name");
     }
 
-    public void setSelected(ImageDTO image) {
+    public void setSelected(@Nullable ImageDTO image) {
         selector.setValue(image);
     }
 
